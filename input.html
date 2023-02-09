@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="try" type="text" placeholder="result" onkeyup="mybtn()">
+</body>
+</html>
+<script>
+        function mybtn() {
+        let printcontent = document.getElementById("try").value;
+
+        localStorage.setItem('result', printcontent)
+        let myresult = document.getElementById('try');
+
+        let output = ''
+        output = localStorage.getItem('result');
+        console.log(output)
+    }
+    document.getElementById('try').value = localStorage.getItem('result');
+</script>
